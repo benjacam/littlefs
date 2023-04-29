@@ -6,9 +6,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 // NOLINTBEGIN
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wimplicit-int-conversion"
 #pragma GCC diagnostic ignored "-Wsign-conversion"
+#pragma GCC diagnostic ignored "-Wconversion"
 
 #include "lfs.h"
 #include "lfs_util.h"
@@ -5820,4 +5819,3 @@ int lfs_migrate(lfs_t *lfs, const struct lfs_config *cfg) {
 }
 #endif
 // NOLINTEND
-#pragma GCC diagnostic pop
