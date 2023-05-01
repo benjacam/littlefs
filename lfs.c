@@ -3116,7 +3116,7 @@ static int lfs_file_flush(lfs_t *lfs, lfs_file_t *file) {
         if (!(file->flags & LFS_F_INLINE)) {
             lfs_cache_drop(lfs, &file->cache);
         }
-        file->flags &= ~LFS_F_READING;
+        file->flags &= ~(uint32_t)LFS_F_READING;
     }
 
 #ifndef LFS_READONLY
